@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wygodny Salon – pufy, poduszki i panele tapicerowane na wymiar</title>
+<meta name="description" content="Wygodny Salon – pufy, podnóżki, poduszki i panele tapicerowane na wymiar. Indywidualne wymiary, tkaniny i kolory. Realizacje na zamówienie.">
+<meta name="keywords" content="pufy na wymiar, poduszki tapicerowane, panele tapicerowane, podnóżki, meble tapicerowane na zamówienie, tapicer">
+<meta name="author" content="Wygodny Salon">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#b89b5e;--dark:#1c1c1c;--bg:#f7f5f2;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:#222}
+a{text-decoration:none}
+
+nav{position:sticky;top:0;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.1);padding:16px;text-align:center;z-index:100}
+nav a{margin:0 16px;color:#111;font-weight:600}
+nav a:hover{color:var(--gold)}
+
+.page{display:none;min-height:80vh}
+.page.active{display:block}
+
+header{background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://via.placeholder.com/2000x1200');background-size:cover;background-position:center;color:#fff;padding:80px 20px;text-align:center}
+header h1{font-family:'Playfair Display',serif;font-size:64px;margin:10px 0}
+header p{max-width:900px;margin:0 auto 30px;font-size:18px}
+
+.cta{display:inline-block;padding:14px 36px;border-radius:40px;background:var(--gold);color:#111;font-weight:700;margin:6px}
+.cta.alt{background:#fff;color:#111}
+
+section{max-width:1200px;margin:60px auto;padding:0 24px}
+
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin:50px auto}
+.info-box{background:#fff;padding:30px;border-radius:24px;box-shadow:0 15px 40px rgba(0,0,0,.15)}
+
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
+.card{background:#fff;border-radius:30px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,.18);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.card img{width:100%;height:230px;object-fit:cover}
+.card .content{padding:25px;text-align:center}
+
+.config{max-width:800px;margin:40px auto;background:#fff;padding:40px;border-radius:40px;box-shadow:0 40px 90px rgba(0,0,0,.3)}
+label{display:block;margin-top:18px;font-weight:600}
+input,select{width:100%;padding:14px;margin-top:8px;border-radius:12px;border:1px solid #ccc}
+.price{margin-top:20px;font-size:22px;font-weight:700;color:var(--gold)}
+button{margin-top:30px;width:100%;padding:18px;border:none;border-radius:50px;background:var(--dark);color:#fff;font-size:16px;font-weight:700;cursor:pointer}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.gallery img{width:100%;border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+
+footer{text-align:center;background:var(--dark);color:#fff;padding:60px}
+</style>
+</head>
+<body>
+<h1 style="display:none">Wygodny Salon – meble tapicerowane na wymiar</h1>
+
+<nav>
+  <a onclick="showPage('home')">Start</a>
+  <a onclick="showPage('offer')">Oferta</a>
+  <a onclick="showPage('config')">Konfigurator</a>
+  <a onclick="showPage('real')">Nasze realizacje</a>
+</nav>
+
+<!-- START -->
+<div id="home" class="page active">
+<header>
+  <div style="max-width:900px;margin:0 auto">
+    <h1>Wygodny Salon</h1>
+    <p style="font-size:20px;margin:20px 0 30px">
+      Meble tapicerowane <strong>na wymiar</strong> – pufy, podnóżki, poduszki oraz panele tapicerowane.
+      Tworzymy komfort i estetykę dopasowaną do Twojego wnętrza.
+    </p>
+    <img src="https://images.unsplash.com/photo-1616627981481-7a2c0c7c5c9e" alt="Meble tapicerowane" style="width:100%;max-width:700px;border-radius:24px;box-shadow:0 25px 60px rgba(0,0,0,.35);margin:30px 0">
+    <div>
+      <a class="cta" onclick="showPage('offer')">Zobacz ofertę</a>
+      <a class="cta alt" onclick="showPage('real')">Nasze realizacje</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="info-grid">
+    <div class="info-box"><h3>Na wymiar</h3><p>Każdy produkt wykonujemy dokładnie według Twoich wymiarów.</p></div>
+    <div class="info-box"><h3>Tkaniny i kolory</h3><p>Szeroki wybór tkanin, kolorów i struktur.</p></div>
+    <div class="info-box"><h3>Ręczna produkcja</h3><p>Rzemiosło, trwałość i dbałość o detale.</p></div>
+  </div>
+</section>
+</div>
+
+<!-- OFERTA -->
+<div id="offer" class="page">
+<section>
+<h2>Oferta</h2>
+<div class="products">
+<div class="card"><img src="https://via.placeholder.com/600x400"><div class="content"><h3>Pufy</h3><p>Cena od 150 zł</p><a class="cta" onclick="openConfig(150,'Pufa')">Konfiguruj</a></div></div>
+<div class="card"><img src="https://via.placeholder.com/600x400"><div class="content"><h3>Podnóżki</h3><p>Cena od 100 zł</p><a class="cta" onclick="openConfig(100,'Podnóżek')">Konfiguruj</a></div></div>
+<div class="card"><img src="https://via.placeholder.com/600x400"><div class="content"><h3>Poduszki</h3><p>Cena od 35 zł</p><a class="cta" onclick="openConfig(35,'Poduszka')">Konfiguruj</a></div></div>
+<div class="card"><img src="https://via.placeholder.com/600x400"><div class="content"><h3>Panele tapicerowane</h3><p>Cena od 40 zł</p><a class="cta" onclick="openConfig(40,'Panel tapicerowany')">Konfiguruj</a></div></div>
+</div>
+</section>
+</div>
+
+<!-- KONFIGURATOR -->
+<div id="config" class="page">
+<section>
+<h2>Konfigurator</h2>
+<div class="config">
+<form action="https://formspree.io/f/xoqgkzvj" method="POST">
+<label>Produkt</label>
+<input type="text" id="prodName" name="produkt" readonly>
+<label>Wymiary (cm)</label>
+<input type="text" name="wymiary" required>
+<label>Tkanina / kolor</label>
+<input type="text" name="tkanina" required>
+<label>Numer telefonu</label>
+<input type="tel" name="telefon" required>
+<div class="price">Cena od: <span id="price">0</span> zł</div>
+<button type="submit">Wyślij zapytanie</button>
+</form>
+</div>
+</section>
+</div>
+
+<!-- REALIZACJE -->
+<div id="real" class="page">
+<section>
+<h2>Nasze realizacje</h2>
+<div class="gallery">
+<img src="https://via.placeholder.com/600x400">
+<img src="https://via.placeholder.com/600x400">
+<img src="https://via.placeholder.com/600x400">
+<img src="https://via.placeholder.com/600x400">
+</div>
+</section>
+</div>
+
+<footer>
+<p><strong>Wygodny Salon</strong> – pufy, poduszki, podnóżki i panele tapicerowane na wymiar.</p>
+<p>Realizujemy zamówienia indywidualne – dowolne wymiary, tkaniny i kolory.</p>
+<p>© 2025 Wygodny Salon – tapicerstwo na wymiar</p>
+</footer>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+function openConfig(price,name){
+  showPage('config');
+  document.getElementById('price').innerText=price;
+  document.getElementById('prodName').value=name;
+}
+</script>
+
+</body>
+</html>
